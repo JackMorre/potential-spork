@@ -10,54 +10,78 @@
   <body>
     <header>
       <h1 class="brand">PP</h1>
-      <nav>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="2em"
+        viewBox="0 0 448 512"
+      >
+        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+        <style>
+          svg {
+            fill: #ffffff;
+          }
+        </style>
+        <path
+          d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+        />
+      </svg>
+
+      <!-- <nav>
         <ul>
           <li><a href="#deviceSection">Device</a></li>
           <li><a href="#specsSection">Specs</a></li>
           <li><a class="button primary" href="#salesSection">Buy Now</a></li>
         </ul>
-      </nav>
+      </nav> -->
     </header>
     <main>
-      <section>
+      <section class="hero">
         <h2 id="deviceSection">Introducing Perfection!</h2>
         <p>
           The Original 'Smartphone'! Because who needs apps when you can play
           Snake and survive the apocalypse with a battery that lasts longer than
           your relationships?
         </p>
-
+        <a class="button primary" href="#">Pre-Order Now!</a>
         <!-- toolbars, non-descript buttons -->
       </section>
-      <section>
-        <h2 id="specsSection">Specs</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>colname</th>
-              <th>colname</th>
-              <th>colname</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>dataCell</td>
-              <td>dataCell</td>
-              <td>dataCell</td>
-            </tr>
-          </tbody>
-        </table>
+      <section class="specs">
+        <h3 id="specsSection">Specs</h3>
+        <div class="specs-c">
+          <p class="spec-line">6.7 inch Retina Display</p>
+          <p class="spec-line">6.55MP camera</p>
+          <p class="spec-line">6.36 hours battery life</p>
+          <p class="spec-line">2023 touch unlock</p>
+          <p class="spec-line">FAST wireless charging</p>
+        </div>
         <!-- Used for confims actions, "Save", CTA -->
-        <a class="button primary" href="#">Primary</a>
+        <a class="button primary" href="#">Full Specs</a>
       </section>
-      <section aria-label="Buy Now">
-        <h2 id="salesSection">Third Section</h2>
-        <!-- LogOut,  -->
-        <div class="buttonWrapper">
-          <button class="button secondary" data-fave="true">Learn More</button>
-          <button class="button primary" data-fave="true">Buy Now</button>
+      <section aria-label="find a store" class="find-a-store">
+        <h3 id="salesSection">Find a Store</h3>
+        <div class="store-card">
+          <h4 class="store-location">Oxford</h4>
+          <p class="store-address">284 Oxford Way, OX3 8PL</p>
+          <p class="store-number">09587412958</p>
+          <button class="button secondary" data-fave="true">Contact Us</button>
+        </div>
+        <div class="store-card">
+          <h4 class="store-location">York</h4>
+          <p class="store-address">7 York Main Street, YO2 4DE</p>
+          <p class="store-number">02451352154</p>
+          <button class="button secondary" data-fave="true">Contact Us</button>
         </div>
       </section>
+      <footer>
+        <h5 class="brand">PP</h5>
+        <nav>
+          <ul>
+            <li><a href=""></a>Home</li>
+            <li><a href=""></a>Pre-Order</li>
+            <li><a href=""></a>Contact us</li>
+          </ul>
+        </nav>
+      </footer>
     </main>
   </body>
 </html>
