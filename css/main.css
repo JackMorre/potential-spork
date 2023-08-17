@@ -1,0 +1,57 @@
+:root {
+  --textFont: "Archivo", sans-serif;
+  --titleFont: "Archivo Black", sans-serif;
+  --mainBackgroundColor: #c6d4ff;
+  --darkBackgroundColor: #7a82ab;
+  --primaryColor: #2dc2bd;
+  --secondaryColor: #12664f;
+  --plainColor: #307473;
+}
+
+body {
+  font-family: var(--textFont);
+  background-color: var(--plainColor);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 400px;
+  width: 400px;
+  background-color: var(--secondaryColor);
+  top: -100px;
+  left: -120px;
+  z-index: -1;
+  transform: rotate(45deg);
+  border-radius: 0 200px 200px 0;
+}
+
+h1 {
+  color: var(--mainBackgroundColor);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+a:link,
+a:visited {
+  color: var(--mainBackgroundColor);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover,
+a:active {
+  color: var(--darkBackgroundColor);
+}
