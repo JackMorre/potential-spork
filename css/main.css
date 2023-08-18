@@ -84,24 +84,75 @@ header * {
 }
 
 header {
+  position: relative;
+}
+
+.headerWrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: var(--sizeSM);
   background-color: var(--primaryAccentColor);
+  transition: all 0.3s ease-in-out;
 }
-header nav ul {
+.headerWrapper nav ul {
   align-items: center;
   gap: 1rem;
 }
-header nav .button {
+.headerWrapper nav .button {
   --primaryAccentColor: var(--secondaryAccentColor);
   color: var(--surfaceColor);
 }
 
+header #mainNav ul {
+  gap: 1rem;
+  align-items: center;
+  flex-direction: column;
+  color: var(--onSurfaceColor);
+}
+
+header #mainNav ul li a:link {
+  color: white;
+  text-decoration: none;
+}
+
+/* hide the nav by default */
+#mainNav {
+  background-color: var(--primaryAccentColor);
+  display: none;
+  justify-content: center;
+  padding-bottom: 20px;
+  position: absolute;
+  top: 0px;
+  left: 0;
+
+  transition: all 0.3s ease-in-out;
+}
+
+#mainNav.open {
+  display: flex;
+  width: 100%;
+  transform: translateY(0px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* show the navbar */
+#mainNav.open {
+  transform: translateY(90px);
+}
+
+.visually-hidden {
+  background-color: unset;
+  border: none;
+}
+
+.visually-hidden-span {
+  display: none;
+}
+
 .hero {
-  height: 80vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -119,7 +170,7 @@ header nav .button {
   position: absolute;
   width: 100vh;
   height: 100px;
-  bottom: -50px;
+  bottom: -75px;
   right: -200px;
   background-color: var(--primaryAccentColor);
   opacity: 0.5;
